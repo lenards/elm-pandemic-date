@@ -3,7 +3,7 @@
     "name": "lenards/elm-pandemic-date",
     "summary": "When you feel like time stopped and we're still in March 2020 ...",
     "license": "BSD-3-Clause",
-    "version": "1.0.3",
+    "version": "1.0.0",
     "exposed-modules": [
         "PandemicDate"
     ],
