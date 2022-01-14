@@ -21,7 +21,7 @@ date feels like it is.
     import PandemicDate
     PandemicDate.toPandemicDate (Date.fromCalendarDate 2022 Jan 13)
 
-This will return "March 683th, 2020"
+This will return "March 683rd, 2020"
 
 -}
 toPandemicDate : Date -> String
@@ -32,5 +32,16 @@ toPandemicDate now =
                 Days
                 (Date.fromCalendarDate 2020 Mar 1)
                 now
+
+        ordinality =
+            case modBy 10 days of
+                1 ->
+                    "st"
+                2 ->
+                    "nd"
+                3 ->
+                    "rd"
+                _ ->
+                    "th"
     in
-    "March " ++ String.fromInt days ++ "th, 2020"
+    "March " ++ String.fromInt days ++ ordinality ++ ", 2020"
